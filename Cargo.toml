@@ -1,0 +1,7 @@
+[package]
+name = "bridgebot"
+version = "0.1.0"
+edition = "2021"
+description = "A background daemon that watches Obsidian vaults and git repos, reacting to changes with configurable rules for auto-linking, staleness alerts, and vault maintenance."
+
+[dependencies]
