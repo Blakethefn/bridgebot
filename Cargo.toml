@@ -3,5 +3,49 @@ name = "bridgebot"
 version = "0.1.0"
 edition = "2021"
 description = "A background daemon that watches Obsidian vaults and git repos, reacting to changes with configurable rules for auto-linking, staleness alerts, and vault maintenance."
+license = "MIT"
+repository = "https://github.com/Blakethefn/bridgebot"
+readme = "README.md"
+keywords = ["obsidian", "vault", "daemon", "git", "automation"]
+categories = ["command-line-utilities", "development-tools"]
 
 [dependencies]
+# Config
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+toml = "0.8"
+
+# File watching
+notify = "7"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Git
+git2 = "0.19"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Desktop notifications
+notify-rust = "4"
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Regex for rule patterns
+regex = "1"
+
+# Path handling
+dirs = "6"
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
+
+# Glob patterns
+glob = "0.3"
